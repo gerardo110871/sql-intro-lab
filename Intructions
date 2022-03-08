@@ -1,0 +1,176 @@
+Instructions
+In this project you will be practicing inserting and querying data using SQL. You’ll make use of a handy online tool provided by Devmountain that will allow you to write SQL in your browser.
+
+Go to https://postgres.devmountain.com/
+
+On the left are the tables with their fields, the right is where you will be writing our queries, and the bottom is where you will see our results.
+
+Each section below matches a file in the folder you downloaded from Frodo. Complete that section’s problems inside that file.
+
+Any new tables or records that you add into the database will be removed after you refresh the page.
+
+Setup
+Download the exercise folder from Frodo
+
+Navigate to the folder in your terminal
+
+Run git init inside the folder
+
+Open the folder in VS Code
+
+Run git add and git commit (don’t forget the m flag and a message)
+
+Create a repo on GitHub and connect it to your local repo
+
+Person
+In the person.sql file, write out the code for the following problems:
+
+Create a table called person that records a person’s id, name, age, height (in cm , city, favorite_color. id should be an auto-incrementing id/primary key (use type: SERIAL)
+
+Add 5 different people into the person database. Remember to not include the person_id because it should auto-increment.
+
+Select all the people in the person table by height from tallest to shortest.
+
+Select all the people in the person table by height from shortest to tallest.
+
+Select all the people in the person table by age from oldest to youngest.
+
+Select all the people in the person table older than age 20.
+
+Select all the people in the person table that are exactly 18.
+
+Select all the people in the person table that are less than 20 and older than 30.
+
+Select all the people in the person table that are not 27 (use not equals).
+
+Select all the people in the person table where their favorite color is not red.
+
+Select all the people in the person table where their favorite color is not red and is not blue.
+
+Select all the people in the person table where their favorite color is orange or green.
+
+Select all the people in the person table where their favorite color is orange, green or blue (use IN).
+
+Select all the people in the person table where their favorite color is yellow or purple (use IN).
+
+Orders
+In the orders.sql file, write out the code for the following problems:
+
+Create a table called orders that records: order_id, person_id, product_name, product_price, quantity.
+
+Add 5 orders to the orders table.
+
+Make orders for at least two different people.
+
+person_id should be different for different people.
+
+Select all the records from the orders table.
+
+Calculate the total number of products ordered.
+
+Calculate the total order price.
+
+Calculate the total order price by a single person_id.
+
+Artist
+In the artist.sql file, write out the code for the following problems:
+
+Add 3 new artists to the artist table. (It already exists.)
+
+Select 10 artists in reverse alphabetical order.
+
+Select 5 artists in alphabetical order.
+
+Select all artists that start with the word ‘Black’.
+
+Select all artists that contain the word ‘Black’.
+
+Employee
+In the employee.sql file, write out the code for the following problems:
+
+List all employee first and last names only that live in Calgary.
+
+Find the birthdate for the youngest employee.
+
+Find the birthdate for the oldest employee.
+
+Find everyone that reports to Nancy Edwards (use the ReportsTo column).
+
+You will need to query the employee table to find the id for Nancy Edwards
+
+Count how many people live in Lethbridge.
+
+Invoice
+In the invoice.sql file, write out the code for the following problems:
+
+Count how many orders were made from the USA.
+
+Find the largest order total amount.
+
+Find the smallest order total amount.
+
+Find all orders bigger than $5.
+
+Count how many orders were smaller than $5.
+
+Count how many orders were in CA, TX, or AZ (use IN).
+
+Get the average total of the orders.
+
+Get the total sum of the orders.
+
+Update the invoice with an invoice_id of 5 to have a total order amount of 24.
+
+Delete the invoice with an invoice_id of 1.
+
+Group By
+In the group_by.sql file, write out the code for the following problems:
+
+These questions reference the invoice, track and album tables.
+
+Find the sum of totals in the invoice table grouped by billing_state.
+
+Find the average track length (in milliseconds) by album. Order the table by the averages.
+
+Find a count of how many albums the artists with the ids 8 and 22 have respectively. Use COUNT, WHERE/IN, and GROUP BY.
+
+Update
+In the update.sql file, write out the code for the following problems:
+
+These questions reference both the customer table and track table.
+
+Find all customers with fax numbers and set those numbers to null.
+
+Find all customers with no company (null) and set their company to “Self”.
+
+Find the customer Julia Barnett and change her last name to Thompson.
+
+Find the customer with this email luisrojas@yahoo.cl and change his support rep to 4.
+
+Find all tracks that are the genre Metal and have no composer. Set the composer to “The darkness around us”.
+
+Delete
+In the delete.sql file, write out the code for the following problems:
+
+Deleting is DANGEROUS!
+
+Always do a select before a delete to make sure you get back exactly what you want and only what you want to delete!
+
+Since we cannot delete anything from the pre-defined tables (foreign key restraints), let’s go make our own tables in SQL Tabs! (Technically, you can create tables in the Postgres Sandbox too, but let’s practice with SQL Tabs.)
+
+# Open up SQL Tabs and connect to the Heroku DB you set up during the demo.
+
+Create a table called animals that has 4 columns: id - serialized integer that’s the primary key, name - can be any data type that holds strings, type - also for strings, and age which will be a whole number.
+
+Next, run the commented code provided in delete.sql to insert some data into your table.
+
+Try selecting from animals to confirm that everything worked.
+
+Delete all ‘lion’ entries from the table.
+
+Delete all animals whose names start with “M”.
+
+Delete all entries whose age is less than 9.
+
+Push to GitHub
+When you have completed the questions: add, commit, and push your work to GitHub.
